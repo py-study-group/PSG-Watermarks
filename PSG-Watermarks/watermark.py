@@ -7,14 +7,12 @@ class Watermark:
     # Pass the image to be watermarked
     def __init__(self, image):
         self.image = Image.open(image)
-        print(self.image.size)
         self.watermark_image = None
         self.watermark_text = None
 
     # Set watermark image
     def set_watermark_image(self, watermark_image):
         self.watermark_image = WatermarkImage(watermark_image)
-        print(self.watermark_image.image.size)
 
     # Set watermark text
     def set_watermark_text(self, watermark_text):
